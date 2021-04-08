@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Zero Dragon `s blog</title>
+  
+  <subtitle>每天都进步一些，明天我就是大牛</subtitle>
+  <link href="https://lyzerodragon.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://lyzerodragon.github.io/"/>
+  <updated>2021-04-02T03:25:45.020Z</updated>
+  <id>https://lyzerodragon.github.io/</id>
+  
+  <author>
+    <name>Zero Dragon</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>撸图库遇到的麻烦事</title>
+    <link href="https://lyzerodragon.github.io/2021/04/02/%E6%92%B8%E5%9B%BE%E5%BA%93%E9%81%87%E5%88%B0%E7%9A%84%E9%BA%BB%E7%83%A6%E4%BA%8B/"/>
+    <id>https://lyzerodragon.github.io/2021/04/02/%E6%92%B8%E5%9B%BE%E5%BA%93%E9%81%87%E5%88%B0%E7%9A%84%E9%BA%BB%E7%83%A6%E4%BA%8B/</id>
+    <published>2021-04-02T02:40:51.000Z</published>
+    <updated>2021-04-02T03:25:45.020Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;昨天在github撸个hexo，也就是本站.下午打算撸个图床，搞起个gitee的图床自己能访问，但是放网站里就&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="技术流" scheme="https://lyzerodragon.github.io/categories/%E6%8A%80%E6%9C%AF%E6%B5%81/"/>
+    
+    
+    <category term="搞技术的那些事" scheme="https://lyzerodragon.github.io/tags/%E6%90%9E%E6%8A%80%E6%9C%AF%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello Hexo</title>
+    <link href="https://lyzerodragon.github.io/2021/04/01/hello-hexo/"/>
+    <id>https://lyzerodragon.github.io/2021/04/01/hello-hexo/</id>
+    <published>2021-04-01T07:40:51.000Z</published>
+    <updated>2021-04-02T06:15:52.220Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="https://lyzerodragon.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://lyzerodragon.github.io/tags/java/"/>
+    
+  </entry>
+  
+</feed>
