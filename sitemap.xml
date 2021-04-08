@@ -9,13 +9,6 @@
   </url>
   
   <url>
-    <loc>https://lyzerodragon.github.io/about/index.html</loc>
-    
-    <lastmod>2021-04-02</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://lyzerodragon.github.io/java/index.html</loc>
     
     <lastmod>2021-04-02</lastmod>
@@ -60,14 +53,14 @@
 
   
   <url>
-    <loc>https://lyzerodragon.github.io/tags/%E6%90%9E%E6%8A%80%E6%9C%AF%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</loc>
+    <loc>https://lyzerodragon.github.io/tags/java/</loc>
     <lastmod>2021-04-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lyzerodragon.github.io/tags/java/</loc>
+    <loc>https://lyzerodragon.github.io/tags/%E6%90%9E%E6%8A%80%E6%9C%AF%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</loc>
     <lastmod>2021-04-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -76,14 +69,14 @@
 
   
   <url>
-    <loc>https://lyzerodragon.github.io/categories/%E6%8A%80%E6%9C%AF%E6%B5%81/</loc>
+    <loc>https://lyzerodragon.github.io/categories/java/</loc>
     <lastmod>2021-04-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lyzerodragon.github.io/categories/java/</loc>
+    <loc>https://lyzerodragon.github.io/categories/%E6%8A%80%E6%9C%AF%E6%B5%81/</loc>
     <lastmod>2021-04-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
