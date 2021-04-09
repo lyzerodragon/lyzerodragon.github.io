@@ -12,6 +12,12 @@
       </tags>
   </entry>
   <entry>
+    <title>test</title>
+    <url>/2021/04/09/test/</url>
+    <content><![CDATA[<p>测试文章</p>
+]]></content>
+  </entry>
+  <entry>
     <title>撸图库遇到的麻烦事</title>
     <url>/2021/04/02/%E6%92%B8%E5%9B%BE%E5%BA%93%E9%81%87%E5%88%B0%E7%9A%84%E9%BA%BB%E7%83%A6%E4%BA%8B/</url>
     <content><![CDATA[<p>昨天在github撸个hexo，也就是本站.下午打算撸个图床，搞起个gitee的图床自己能访问，但是放网站里就<img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210402104702.png" alt="有点难受了">很奈斯，没办法，又google了一大堆，然后做了现在用的github，遇到了没办法上传，emmm，之前的分支好像都是 <strong>master</strong> 但是现在我的主要分支是 <em>main</em> 就很帮，就很奈斯。粗心大意搞起了两天。虽然有点小难受，但是搞起了就行了。</p>
