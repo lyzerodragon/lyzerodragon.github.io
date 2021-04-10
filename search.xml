@@ -3,7 +3,7 @@
   <entry>
     <title>java反射</title>
     <url>/2021/04/10/Java%E5%8F%8D%E5%B0%84/</url>
-    <content><![CDATA[<h1><span id="反射">反射</span></h1><h2><span id="反射的概念">反射的概念：</span></h2><h5><span id="warning反射是框架设计的灵魂">:warning:<em><strong>反射是框架设计的灵魂</strong></em></span></h5><p>使用的前提条件：必须先得到代表字节码的Class，Class类用于表示.class文件(字节码)</p>
+    <content><![CDATA[<h1><span id="反射">反射</span></h1><h2><span id="反射的概念">反射的概念：</span></h2><h5><span id="反射是框架设计的灵魂"><span class="github-emoji"><span>⚠</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><em><strong>反射是框架设计的灵魂</strong></em></span></h5><p>使用的前提条件：必须先得到代表字节码的Class，Class类用于表示.class文件(字节码)</p>
 <blockquote>
 <p>java反射机制是在运行状态中，对于任意一个类，都能知道这个类的所有属性和方法，对于任意一个对象，都能调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的功能称为java语言的反射机制。</p>
 <p>要想解剖一个类，必须先要获取到该类的字节码文件对象。而解剖使用的就是Class类中的方法，所以先要获取到每一个字节码文件对应的Class类型的对象。</p>
@@ -15,18 +15,18 @@
 <p><img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210410143728.png" alt="image-20210410143716454"></p>
 <h2><span id="基本用法">基本用法：</span></h2><p><img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210410144137.png" alt="image-20210410144132286"></p>
 <h3><span id="获取字节码文件">获取字节码文件</span></h3><p><strong>方法一</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Person p = <span class="keyword">new</span> Person();</span><br><span class="line">Class pClass = p.getClass();</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">Person p = <span class="keyword">new</span> Person();</span><br><span class="line">Class pClass = p.getClass();</span><br></pre></td></tr></tbody></table></figure>
 
 <p>方法二</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Class cl = Class.forName(类的全路径);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">Class cl = Class.forName(类的全路径);</span><br></pre></td></tr></tbody></table></figure>
 
 <p>方法三</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Class c = Person.class;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">Class c = Person.class;</span><br></pre></td></tr></tbody></table></figure>
 
 <blockquote>
-<p>:grey_exclamation:类似于系统提供的很多类都可以直接调用 class</p>
+<p><span class="github-emoji"><span>❕</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2755.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>类似于系统提供的很多类都可以直接调用 class</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String.class;</span><br><span class="line">Integer.class</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">String.class;</span><br><span class="line">Integer.class</span><br></pre></td></tr></tbody></table></figure>
 
 <h3><span id="获取公共构造函数">获取公共构造函数</span></h3><table>
 <thead>
@@ -47,36 +47,36 @@
 <li><p>再从获取到的字节码文件中获取到构造方法信息</p>
 </li>
 </ol>
-<p>:warning:需要刨除异常</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 获取字节码文件</span></span><br><span class="line">Class studentClass = Class.forName(<span class="string">&quot;cn.zdsch.extend.demo1.Student&quot;</span>);</span><br><span class="line"><span class="comment">// 获取公共构造方法对象</span></span><br><span class="line">Constructor[] constructors = studentClass.getConstructors();</span><br><span class="line"><span class="comment">//            输出公共构造方法数组</span></span><br><span class="line"><span class="keyword">for</span> (Constructor constructor : constructors) &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;公共的构造函数:&quot;</span>+constructor.toString());</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><span class="github-emoji"><span>⚠</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>需要抛出异常</p>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 获取字节码文件</span></span><br><span class="line">Class studentClass = Class.forName(<span class="string">"cn.zdsch.extend.demo1.Student"</span>);</span><br><span class="line"><span class="comment">// 获取公共构造方法对象</span></span><br><span class="line">Constructor[] constructors = studentClass.getConstructors();</span><br><span class="line"><span class="comment">//            输出公共构造方法数组</span></span><br><span class="line"><span class="keyword">for</span> (Constructor constructor : constructors) {</span><br><span class="line">    System.out.println(<span class="string">"公共的构造函数:"</span>+constructor.toString());</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 
 <h3><span id="获取所有的构造方法">获取所有的构造方法</span></h3><p><img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210410150347.png" alt="image-20210410150342722"></p>
 <blockquote>
 <p>返回反映<code>Constructor</code>对象表示的类声明的所有<code>Constructor</code>对象的数组<code>类</code>  。 这些是public，protected，default（package）访问和私有构造函数。  返回的数组中的元素不会排序，并且不是任何特定的顺序。 如果类有一个默认构造函数，它将包含在返回的数组中。  如果<code>类</code>对象表示接口，原始类型，数组类或空值，则此方法返回长度为0的数组</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getDeclaredConstructors</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 获取字节码文件</span></span><br><span class="line">    Class c = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        c = Class.forName(<span class="string">&quot;cn.zdsch.extend.demo1.Student&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//获取所有的构造函数对象</span></span><br><span class="line">    Constructor[] constructors = c.getDeclaredConstructors();</span><br><span class="line">    <span class="keyword">for</span>(Constructor con:constructors)</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(con);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getDeclaredConstructors</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="comment">// 获取字节码文件</span></span><br><span class="line">    Class c = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> {</span><br><span class="line">        c = Class.forName(<span class="string">"cn.zdsch.extend.demo1.Student"</span>);</span><br><span class="line">    } <span class="keyword">catch</span> (ClassNotFoundException e) {</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">//获取所有的构造函数对象</span></span><br><span class="line">    Constructor[] constructors = c.getDeclaredConstructors();</span><br><span class="line">    <span class="keyword">for</span>(Constructor con:constructors)</span><br><span class="line">    {</span><br><span class="line">        System.out.println(con);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p><img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210410151506.png" alt="image-20210410151504442"></p>
 <p>构造方法的作用：初始化创建对象，创建对象就必须使用构造方法！我们这里不管获取部分构造还是所有构造其实意义都不大，<strong>因为我们创建对象，只需要一个构造即可，所以我们要学会如何获取单个构造!!!</strong></p>
 <h3><span id="获取public修饰符-单个构造方法">获取public修饰符 单个构造方法</span></h3><p><img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210410152412.png" alt="image-20210410152411494"></p>
 <p>该方法只返回一个Constructor对象，</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//            获取单个公共方法:Student的构造方法-&gt;Student(String name, int age, String studentNumber, String studentClass, boolean sex)</span></span><br><span class="line"><span class="comment">//cn.zdsch.extend.demo1.Student(java.lang.String,int,java.lang.String,java.lang.String,boolean)</span></span><br><span class="line">Constructor constructor = studentClass.getConstructor(String.class, <span class="keyword">int</span>.class, String.class, String.class, <span class="keyword">boolean</span>.class);</span><br><span class="line">System.out.println(<span class="string">&quot;获取到的构造方法为：&quot;</span>+constructor.toString());</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">//            获取单个公共方法:Student的构造方法-&gt;Student(String name, int age, String studentNumber, String studentClass, boolean sex)</span></span><br><span class="line"><span class="comment">//cn.zdsch.extend.demo1.Student(java.lang.String,int,java.lang.String,java.lang.String,boolean)</span></span><br><span class="line">Constructor constructor = studentClass.getConstructor(String.class, <span class="keyword">int</span>.class, String.class, String.class, <span class="keyword">boolean</span>.class);</span><br><span class="line">System.out.println(<span class="string">"获取到的构造方法为："</span>+constructor.toString());</span><br></pre></td></tr></tbody></table></figure>
 
 <p><img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210410153154.png" alt="image-20210410153153813"></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Class studentClass = Student.class;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    Constructor declaredConstructor = studentClass.getDeclaredConstructor(String.class, <span class="keyword">int</span>.class, String.class, String.class, <span class="keyword">boolean</span>.class);</span><br><span class="line">    System.out.println(declaredConstructor);</span><br><span class="line">&#125; <span class="keyword">catch</span> (NoSuchMethodException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">Class studentClass = Student.class;</span><br><span class="line"><span class="keyword">try</span> {</span><br><span class="line">    Constructor declaredConstructor = studentClass.getDeclaredConstructor(String.class, <span class="keyword">int</span>.class, String.class, String.class, <span class="keyword">boolean</span>.class);</span><br><span class="line">    System.out.println(declaredConstructor);</span><br><span class="line">} <span class="keyword">catch</span> (NoSuchMethodException e) {</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 
 
 <h3><span id="私有构造方法">私有构造方法</span></h3><h4><span id="私有构造方法的特点">私有构造方法的特点：</span></h4><p>将一个类的构造函数私有化，可以使得该类不被实例化，和不能被继承。要创建这个类的实例，唯一的办法是提供一个公共静态方法。这种方式被称为单例模式。</p>
-<h4><span id="反射获取私有构造方法">反射获取私有构造方法：</span></h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"> Class studentClass;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">//            获取Class</span></span><br><span class="line">    studentClass = Class.forName(<span class="string">&quot;cn.zdsch.extend.demo1.Student&quot;</span>);</span><br><span class="line">    <span class="comment">//            获取构造方法</span></span><br><span class="line">    Constructor constructor = studentClass.getConstructor(String.class, <span class="keyword">int</span>.class);</span><br><span class="line">    <span class="comment">//            创建对象</span></span><br><span class="line">    Object object = constructor.newInstance(<span class="string">&quot;name&quot;</span>, <span class="number">18</span>);</span><br><span class="line"></span><br><span class="line">    System.out.println(object);</span><br><span class="line">&#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125; <span class="keyword">catch</span> (NoSuchMethodException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125; <span class="keyword">catch</span> (InstantiationException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125; <span class="keyword">catch</span> (InvocationTargetException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4><span id="反射获取私有构造方法">反射获取私有构造方法：</span></h4><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"> Class studentClass;</span><br><span class="line"><span class="keyword">try</span> {</span><br><span class="line">    <span class="comment">//            获取Class</span></span><br><span class="line">    studentClass = Class.forName(<span class="string">"cn.zdsch.extend.demo1.Student"</span>);</span><br><span class="line">    <span class="comment">//            获取构造方法</span></span><br><span class="line">    Constructor constructor = studentClass.getConstructor(String.class, <span class="keyword">int</span>.class);</span><br><span class="line">    <span class="comment">//            创建对象</span></span><br><span class="line">    Object object = constructor.newInstance(<span class="string">"name"</span>, <span class="number">18</span>);</span><br><span class="line"></span><br><span class="line">    System.out.println(object);</span><br><span class="line">} <span class="keyword">catch</span> (ClassNotFoundException e) {</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">} <span class="keyword">catch</span> (NoSuchMethodException e) {</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">} <span class="keyword">catch</span> (IllegalAccessException e) {</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">} <span class="keyword">catch</span> (InstantiationException e) {</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">} <span class="keyword">catch</span> (InvocationTargetException e) {</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p><img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210410154225.png" alt="image-20210410154223898"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210410154410.png" alt="image-20210410154408547"></p>
-<p>:grey_question:没有找到构造方法？</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="title">Student</span><span class="params">(String name, <span class="keyword">int</span> age)</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p><span class="github-emoji"><span>❔</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2754.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>没有找到构造方法？</p>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="title">Student</span><span class="params">(String name, <span class="keyword">int</span> age)</span></span>{}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>私有的构造方法。</p>
-<h4><span id="暴力访问私有构造私有方法">暴力访问私有构造，私有方法</span></h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">/            获取Class</span><br><span class="line">    studentClass = Class.forName(<span class="string">&quot;cn.zdsch.extend.demo1.Student&quot;</span>);</span><br><span class="line"><span class="comment">//            使用getDeclaredConstructor获取私有构造方法</span></span><br><span class="line">Constructor constructor = studentClass.getDeclaredConstructor(String.class, <span class="keyword">int</span>.class);</span><br><span class="line"><span class="comment">//            暴力访问</span></span><br><span class="line">constructor.setAccessible(<span class="keyword">true</span>);</span><br><span class="line"><span class="comment">//            创建对象</span></span><br><span class="line">Student student =(Student) constructor.newInstance(<span class="string">&quot;name&quot;</span>, <span class="number">18</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(student);</span><br></pre></td></tr></table></figure>
+<h4><span id="暴力访问私有构造私有方法">暴力访问私有构造，私有方法</span></h4><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">/            获取Class</span><br><span class="line">    studentClass = Class.forName(<span class="string">"cn.zdsch.extend.demo1.Student"</span>);</span><br><span class="line"><span class="comment">//            使用getDeclaredConstructor获取私有构造方法</span></span><br><span class="line">Constructor constructor = studentClass.getDeclaredConstructor(String.class, <span class="keyword">int</span>.class);</span><br><span class="line"><span class="comment">//            暴力访问</span></span><br><span class="line">constructor.setAccessible(<span class="keyword">true</span>);</span><br><span class="line"><span class="comment">//            创建对象</span></span><br><span class="line">Student student =(Student) constructor.newInstance(<span class="string">"name"</span>, <span class="number">18</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(student);</span><br></pre></td></tr></tbody></table></figure>
 
 <p><img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210410155108.png" alt="image-20210410155107064"></p>
 <p>虽然赋值没成功，但是可以访问私有构造方法了！</p>
@@ -96,12 +96,30 @@
   <entry>
     <title>Hello Hexo</title>
     <url>/2021/04/01/hello-hexo/</url>
-    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;hello world!&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content><![CDATA[<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>{</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>{</span><br><span class="line">		System.out.println(<span class="string">"hello world!"</span>);</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>]]></content>
       <categories>
         <category>java</category>
       </categories>
       <tags>
         <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo next 主题发布到github上后字符表情失效？</title>
+    <url>/2021/04/10/hexo-next%E5%AD%97%E7%AC%A6%E8%A1%A8%E6%83%85%E5%A4%B1%E6%95%88%EF%BC%9F/</url>
+    <content><![CDATA[<p>刚写了java反射发布到github的hexo上，结果看了下字符表情😊 <code>:blush:</code>没显示出来？？，查了下资料安装下插件就好了</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">cnpm[或者npm] install hexo-filter-github-emojis --save</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后重新</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></tbody></table></figure>
+
+<p>就行了</p>
+]]></content>
+      <categories>
+        <category>技术流</category>
+      </categories>
+      <tags>
+        <tag>搞技术的那些事</tag>
       </tags>
   </entry>
   <entry>
@@ -129,7 +147,7 @@
 </ol>
 </li>
 <li><p>cdn加速:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/github用户名/仓库@分支</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/github用户名/仓库@分支</span><br></pre></td></tr></tbody></table></figure></li>
 </ol>
 <p>附赠：<a href="https://markdown.com.cn/">Markdown 语法教程</a></p>
 ]]></content>
@@ -154,10 +172,10 @@
 <h3><span id="站点地图生成教程">站点地图生成教程</span></h3><p>（别人的都有用，为啥我的老出错。。这难道是对我长得太帅的惩罚？？QWQ）：</p>
 <h4><span id="npm或者cnpm">npm或者cnpm</span></h4><p>npm install hexo-generator-sitemap –save</p>
 <p>打开hexo配置文件_config.yml</p>
-<h4><span id="添加">添加：</span></h4><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># sitemap</span></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure>
+<h4><span id="添加">添加：</span></h4><figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># sitemap</span></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>然后命令行切换到你的</p>
-<h4><span id="博客目录">博客目录:</span></h4><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<h4><span id="博客目录">博客目录:</span></h4><figure class="highlight cmd"><table><tbody><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></tbody></table></figure>
 
 <p>你要是太帅的话就可能遇到和我一样的经历！</p>
 <p>暂未解决</p>
