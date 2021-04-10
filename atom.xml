@@ -6,7 +6,7 @@
   <link href="https://lyzerodragon.github.io/atom.xml" rel="self"/>
   
   <link href="https://lyzerodragon.github.io/"/>
-  <updated>2021-04-09T01:24:25.976Z</updated>
+  <updated>2021-04-09T09:50:43.436Z</updated>
   <id>https://lyzerodragon.github.io/</id>
   
   <author>
@@ -17,24 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="https://lyzerodragon.github.io/2021/04/09/test/"/>
-    <id>https://lyzerodragon.github.io/2021/04/09/test/</id>
+    <title>站点地图惹的祸</title>
+    <link href="https://lyzerodragon.github.io/2021/04/09/%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE%E6%83%B9%E7%9A%84%E7%A5%B8/"/>
+    <id>https://lyzerodragon.github.io/2021/04/09/%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE%E6%83%B9%E7%9A%84%E7%A5%B8/</id>
     <published>2021-04-09T01:23:12.000Z</published>
-    <updated>2021-04-09T01:24:25.976Z</updated>
+    <updated>2021-04-09T09:50:43.436Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;测试文章&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;都是站点地图惹的祸啊！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;先上图&lt;img src=&quot;https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210409174108.png&quot;</summary>
         
       
     
     
     
+    <category term="技术流" scheme="https://lyzerodragon.github.io/categories/%E6%8A%80%E6%9C%AF%E6%B5%81/"/>
+    
+    
+    <category term="搞技术的那些事" scheme="https://lyzerodragon.github.io/tags/%E6%90%9E%E6%8A%80%E6%9C%AF%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
     
   </entry>
   
