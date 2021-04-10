@@ -6,7 +6,7 @@
   <link href="https://lyzerodragon.github.io/atom.xml" rel="self"/>
   
   <link href="https://lyzerodragon.github.io/"/>
-  <updated>2021-04-09T09:50:43.436Z</updated>
+  <updated>2021-04-10T08:01:24.861Z</updated>
   <id>https://lyzerodragon.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java反射</title>
+    <link href="https://lyzerodragon.github.io/2021/04/10/Java%E5%8F%8D%E5%B0%84/"/>
+    <id>https://lyzerodragon.github.io/2021/04/10/Java%E5%8F%8D%E5%B0%84/</id>
+    <published>2021-04-10T08:00:35.000Z</published>
+    <updated>2021-04-10T08:01:24.861Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;反射&quot;&gt;反射&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span id=&quot;反射的概念&quot;&gt;反射的概念：&lt;/span&gt;&lt;/h2&gt;&lt;h5&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="https://lyzerodragon.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://lyzerodragon.github.io/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>站点地图惹的祸</title>
