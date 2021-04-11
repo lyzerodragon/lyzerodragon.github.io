@@ -123,6 +123,35 @@
       </tags>
   </entry>
   <entry>
+    <title>站点地图惹的祸</title>
+    <url>/2021/04/09/%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE%E6%83%B9%E7%9A%84%E7%A5%B8/</url>
+    <content><![CDATA[<p>都是站点地图惹的祸啊！</p>
+<blockquote>
+<p>先上图<img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210409174108.png" alt="image-20210409174106605">是那么的难受，找了几天没找到问题所在，看了<code>hexo-generator-sitemap</code>源码，找了百度，看了谷歌。没用啊QAQ</p>
+<p>格式不支持，google不收录，就很棒！在这先推荐个<a href="https://pro-sitemaps.com/">google sitemap的生成网站</a>说的多了都是泪</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210409174313.png" alt="image-20210409174311588"></p>
+<p>google接受得格式是：</p>
+<p><img src="C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210409174514919.png" alt="image-20210409174514919"></p>
+<h3><span id="站点地图生成教程">站点地图生成教程</span></h3><p>（别人的都有用，为啥我的老出错。。这难道是对我长得太帅的惩罚？？QWQ）：</p>
+<h4><span id="npm或者cnpm">npm或者cnpm</span></h4><p>npm install hexo-generator-sitemap –save</p>
+<p>打开hexo配置文件_config.yml</p>
+<h4><span id="添加">添加：</span></h4><figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># sitemap</span></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后命令行切换到你的</p>
+<h4><span id="博客目录">博客目录:</span></h4><figure class="highlight cmd"><table><tbody><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></tbody></table></figure>
+
+<p>你要是太帅的话就可能遇到和我一样的经历！</p>
+<p>暂未解决</p>
+]]></content>
+      <categories>
+        <category>技术流</category>
+      </categories>
+      <tags>
+        <tag>搞技术的那些事</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>撸图库遇到的麻烦事</title>
     <url>/2021/04/02/%E6%92%B8%E5%9B%BE%E5%BA%93%E9%81%87%E5%88%B0%E7%9A%84%E9%BA%BB%E7%83%A6%E4%BA%8B/</url>
     <content><![CDATA[<p>昨天在github撸个hexo，也就是本站.下午打算撸个图床，搞起个gitee的图床自己能访问，但是放网站里就<img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210402104702.png" alt="有点难受了">很奈斯，没办法，又google了一大堆，然后做了现在用的github，遇到了没办法上传，emmm，之前的分支好像都是 <strong>master</strong> 但是现在我的主要分支是 <em>main</em> 就很帮，就很奈斯。粗心大意搞起了两天。虽然有点小难受，但是搞起了就行了。</p>
@@ -159,32 +188,22 @@
       </tags>
   </entry>
   <entry>
-    <title>站点地图惹的祸</title>
-    <url>/2021/04/09/%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE%E6%83%B9%E7%9A%84%E7%A5%B8/</url>
-    <content><![CDATA[<p>都是站点地图惹的祸啊！</p>
-<blockquote>
-<p>先上图<img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210409174108.png" alt="image-20210409174106605">是那么的难受，找了几天没找到问题所在，看了<code>hexo-generator-sitemap</code>源码，找了百度，看了谷歌。没用啊QAQ</p>
-<p>格式不支持，google不收录，就很棒！在这先推荐个<a href="https://pro-sitemaps.com/">google sitemap的生成网站</a>说的多了都是泪</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210409174313.png" alt="image-20210409174311588"></p>
-<p>google接受得格式是：</p>
-<p><img src="C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210409174514919.png" alt="image-20210409174514919"></p>
-<h3><span id="站点地图生成教程">站点地图生成教程</span></h3><p>（别人的都有用，为啥我的老出错。。这难道是对我长得太帅的惩罚？？QWQ）：</p>
-<h4><span id="npm或者cnpm">npm或者cnpm</span></h4><p>npm install hexo-generator-sitemap –save</p>
-<p>打开hexo配置文件_config.yml</p>
-<h4><span id="添加">添加：</span></h4><figure class="highlight yml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># sitemap</span></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></tbody></table></figure>
+    <title>通过反射写一个通用的设置某个对象的某个属性为指定的值</title>
+    <url>/2021/04/11/%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E5%86%99%E4%B8%80%E4%B8%AA%E9%80%9A%E7%94%A8%E7%9A%84%E8%AE%BE%E7%BD%AE%E6%9F%90%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%9F%90%E4%B8%AA%E5%B1%9E%E6%80%A7%E4%B8%BA%E6%8C%87%E5%AE%9A%E7%9A%84%E5%80%BC/</url>
+    <content><![CDATA[<h5><span id="核心代码">核心代码：</span></h5><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.zdsch.extend.task_two;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cn.zdsch.extend.demo1.Student;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * &lt;p&gt;项目名称: GZ2124 &lt;/p&gt;</span></span><br><span class="line"><span class="comment"> * &lt;p&gt;创建时间: 2021/4/11  13:02 &lt;/p&gt;</span></span><br><span class="line"><span class="comment"> * &lt;p&gt;实现：通过反射写一个通用的设置某个对象的某个属性为指定的值 &lt;/p&gt;</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> &lt;a href="mail to: 865964031@qq.com" rel="nofollow"&gt;Zero Dragon&lt;/a&gt;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> v1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Task_2</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        Task_2 t = <span class="keyword">new</span> Task_2();</span><br><span class="line">        Student student = <span class="keyword">new</span> Student();</span><br><span class="line">        t.setProperty( student, <span class="string">"name"</span> , <span class="string">"测试信息"</span>);</span><br><span class="line">        System.out.println(student.toString());</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 检查对象是否有该属性</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> isPropertyName 属性名</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> cl class</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 对象的属性对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> Field <span class="title">isProperty</span><span class="params">(Class cl ,String isPropertyName)</span></span>{</span><br><span class="line">        Field declaredField = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> {</span><br><span class="line"><span class="comment">//            获取该属性</span></span><br><span class="line">            declaredField = cl.getDeclaredField(isPropertyName);</span><br><span class="line">        } <span class="keyword">catch</span> (NoSuchFieldException e) {</span><br><span class="line">            System.out.println(cl.getName() + <span class="string">"类没有"</span> + isPropertyName + <span class="string">"属性"</span>);</span><br><span class="line"><span class="comment">//            获取属性列表</span></span><br><span class="line">            Field[] declaredFields = cl.getDeclaredFields();</span><br><span class="line">            System.out.println(cl.getName()+<span class="string">"的属性列表"</span>);</span><br><span class="line">            <span class="keyword">for</span> (Field field : declaredFields) {</span><br><span class="line">                System.out.println(<span class="string">"\t"</span>+field.getName());</span><br><span class="line">            }</span><br><span class="line"><span class="comment">//            e.printStackTrace();</span></span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">return</span> declaredField ;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 为对象的属性设置值</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> obj 对象</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> propertyName 属性名</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> value 值</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setProperty</span><span class="params">(Object obj, String propertyName, Object value)</span></span>{</span><br><span class="line"><span class="comment">//        获取对象的class</span></span><br><span class="line">        Class&lt;?&gt; objClass = obj.getClass();</span><br><span class="line"><span class="comment">//        获取到的属性</span></span><br><span class="line">        Field property = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> {</span><br><span class="line"><span class="comment">//            获取属性</span></span><br><span class="line">            property = <span class="keyword">this</span>.isProperty(objClass, propertyName);</span><br><span class="line"><span class="comment">//            获得属性访问权限</span></span><br><span class="line">            property.setAccessible(<span class="keyword">true</span>);</span><br><span class="line"><span class="comment">//            设置属性值</span></span><br><span class="line">            property.set(obj,value);</span><br><span class="line">            System.out.println(<span class="string">"设置成功"</span>);</span><br><span class="line">        } <span class="keyword">catch</span> (IllegalAccessException e) {</span><br><span class="line">            System.out.println(<span class="string">"访问错误!"</span>);</span><br><span class="line"><span class="comment">//            e.printStackTrace();</span></span><br><span class="line">        }<span class="keyword">catch</span> (NullPointerException e){</span><br><span class="line">            System.out.println(<span class="string">"没有获取到"</span>+ propertyName+<span class="string">"属性"</span>);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 
-<p>然后命令行切换到你的</p>
-<h4><span id="博客目录">博客目录:</span></h4><figure class="highlight cmd"><table><tbody><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></tbody></table></figure>
-
-<p>你要是太帅的话就可能遇到和我一样的经历！</p>
-<p>暂未解决</p>
+<h5><span id="student类信息">Student类信息</span></h5><p><img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210411140251.png" alt="image-20210411140250369"></p>
+<p>成功示例：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210411140332.png" alt="image-20210411140330548"></p>
+<p>失败示例:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lyzerodragon/blog-images@main/img/20210411140402.png" alt="image-20210411140401180"></p>
+<p>​</p>
 ]]></content>
       <categories>
-        <category>技术流</category>
+        <category>java</category>
       </categories>
       <tags>
-        <tag>搞技术的那些事</tag>
+        <tag>java</tag>
       </tags>
   </entry>
 </search>

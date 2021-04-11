@@ -6,7 +6,7 @@
   <link href="https://lyzerodragon.github.io/atom.xml" rel="self"/>
   
   <link href="https://lyzerodragon.github.io/"/>
-  <updated>2021-04-10T08:16:22.878Z</updated>
+  <updated>2021-04-11T06:07:44.212Z</updated>
   <id>https://lyzerodragon.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>通过反射写一个通用的设置某个对象的某个属性为指定的值</title>
+    <link href="https://lyzerodragon.github.io/2021/04/11/%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E5%86%99%E4%B8%80%E4%B8%AA%E9%80%9A%E7%94%A8%E7%9A%84%E8%AE%BE%E7%BD%AE%E6%9F%90%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%9F%90%E4%B8%AA%E5%B1%9E%E6%80%A7%E4%B8%BA%E6%8C%87%E5%AE%9A%E7%9A%84%E5%80%BC/"/>
+    <id>https://lyzerodragon.github.io/2021/04/11/%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E5%86%99%E4%B8%80%E4%B8%AA%E9%80%9A%E7%94%A8%E7%9A%84%E8%AE%BE%E7%BD%AE%E6%9F%90%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%9F%90%E4%B8%AA%E5%B1%9E%E6%80%A7%E4%B8%BA%E6%8C%87%E5%AE%9A%E7%9A%84%E5%80%BC/</id>
+    <published>2021-04-11T06:06:55.000Z</published>
+    <updated>2021-04-11T06:07:44.212Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h5&gt;&lt;span id=&quot;核心代码&quot;&gt;核心代码：&lt;/span&gt;&lt;/h5&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="https://lyzerodragon.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://lyzerodragon.github.io/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>java反射</title>
